@@ -41,7 +41,8 @@ app.get('/posts/:id', (req, res) => {
 
 // Create a new post
 app.post('/posts', validatePost, (req, res) => {
-  const post = req.body;
+  const id = Math.random().toString().slice(2);
+  const post = { id, ...req.body };
   db.get('posts').push(post).write();
   res.json(post);
 });

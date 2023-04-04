@@ -22,5 +22,5 @@ content-type: application/json
   "body": "This is a test post.",
   "author": "John Doe",
   "tags": ["test", "example"],
-  "date": "04-03-2022"
+  "date": "2022-04-03"
 }
