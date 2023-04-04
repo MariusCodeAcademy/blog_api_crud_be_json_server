@@ -1,37 +1,64 @@
 const express = require('express');
-const { validatePost } = require('./middleware');
+const { validatePost } = require('../middleware');
 const router = express.Router();
-const db = require('./db');
+const jsonServer = require('json-server');
+const db = jsonServer.router('db.json').db;
 
-// Get all posts
-router.get('/posts', (req, res) => {
-  const posts = db.get('posts').value();
-  res.json(posts);
+router.get('/posts', async (req, res) => {
+  try {
+    const posts = await db.get('posts').value();
+    res.json(posts);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 });
 
-// Get a single post
-router.get('/posts/:id', (req, res) => {
-  const post = db.get('posts').find({ id: req.params.id }).value();
-  res.json(post);
+router.get('/posts/:id', async (req, res) => {
+  try {
+    const post = await db.get('posts').find({ id: req.params.id }).value();
+    if (!post) {
+      return res.status(404).json({ error: 'Post not found' });
+    }
+    res.json(post);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 });
 
-// Create a new post
-router.post('/posts', validatePost, (req, res) => {
-  const post = req.body;
-  db.get('posts').push(post).write();
-  res.json(post);
+router.post('/posts', validatePost, async (req, res) => {
+  try {
+    const post = req.body;
+    const newPost = await db.get('posts').push(post).write();
+    res.json(newPost);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 });
 
-// Update an existing post
-router.put('/posts/:id', validatePost, (req, res) => {
-  const post = db.get('posts').find({ id: req.params.id }).assign(req.body).write();
-  res.json(post);
+router.put('/posts/:id', async (req, res) => {
+  try {
+    const post = await db.get('posts').find({ id: req.params.id }).value();
+    if (!post) {
+      return res.status(404).json({ error: 'Post not found' });
+    }
+    const updatedPost = await db.get('posts').find({ id: req.params.id }).assign(req.body).write();
+    res.json(updatedPost);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 });
 
-// Delete a post
-router.delete('/posts/:id', (req, res) => {
-  db.get('posts').remove({ id: req.params.id }).write();
-  res.sendStatus(204);
+router.delete('/posts/:id', async (req, res) => {
+  try {
+    const post = await db.get('posts').find({ id: req.params.id }).value();
+    if (!post) {
+      return res.status(404).json({ error: 'Post not found' });
+    }
+    await db.get('posts').remove({ id: req.params.id }).write();
+    res.sendStatus(204);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 });
 
 module.exports = router;
