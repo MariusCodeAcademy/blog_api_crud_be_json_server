@@ -1,0 +1,74 @@
+{
+  "posts": [
+    {
+      "title": "Test Post",
+      "body": "This is a test post.",
+      "author": "John Doe",
+      "tags": [
+        "test",
+        "example"
+      ],
+      "date": "2022-04-03T12:00:00Z"
+    },
+    {
+      "title": "Test Post",
+      "body": "This is a test post.",
+      "author": "John Doe",
+      "tags": [
+        "test",
+        "example"
+      ],
+      "date": "2022-04-03T12:00:00Z"
+    },
+    {
+      "title": "Test Post",
+      "body": "This is a test post.",
+      "author": "John Doe",
+      "tags": [
+        "test",
+        "example"
+      ],
+      "date": "2022-04-03"
+    },
+    {
+      "title": "Test Post",
+      "body": "This is a test post.",
+      "author": "John Doe",
+      "tags": [
+        "test",
+        "example"
+      ],
+      "date": "2022"
+    },
+    {
+      "title": "Test Post",
+      "body": "This is a test post.",
+      "author": "John Doe",
+      "tags": [
+        "test",
+        "example"
+      ],
+      "date": "05"
+    },
+    {
+      "title": "Test Post",
+      "body": "This is a test post.",
+      "author": "John Doe",
+      "tags": [
+        "test",
+        "example"
+      ],
+      "date": "2022-04-03"
+    },
+    {
+      "title": "Test Post",
+      "body": "This is a test post.",
+      "author": "John Doe",
+      "tags": [
+        "test",
+        "example"
+      ],
+      "date": "2022-04-03"
+    }
+  ]
+}

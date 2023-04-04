@@ -1,0 +1,26 @@
+GET http://localhost:5000/posts
+
+####
+
+POST http://localhost:5000/posts
+content-type: application/json
+
+{
+  
+  "body": "This is a test post.",
+  "author": "",
+  "tags": ["test", "example"],
+  "date": "2022-04-03T12:00:00Z"
+}
+
+###
+POST http://localhost:5000/posts
+content-type: application/json
+
+{
+  "title": "Test Post",
+  "body": "This is a test post.",
+  "author": "John Doe",
+  "tags": ["test", "example"],
+  "date": "04-03-2022"
+}
