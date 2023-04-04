@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const jsonServer = require('json-server');
 const morgan = require('morgan');
 const { validatePost } = require('./middleware');
@@ -11,7 +12,7 @@ const db = router.db;
 app.use(express.json());
 app.use(morgan('dev'));
 // app.use(middlewares);
-// app.use(router);
+app.use(cors());
 
 // Mount the JSON Server app on the root path
 // app.use('/', server);
