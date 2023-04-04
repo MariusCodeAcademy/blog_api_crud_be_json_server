@@ -23,6 +23,11 @@ app.listen(PORT, () => {
 });
 
 // Get all posts
+app.get('/', (req, res) => {
+  res.redirect('/posts');
+});
+
+// Get all posts
 app.get('/posts', (req, res) => {
   const posts = db.get('posts').value();
   res.json(posts);
