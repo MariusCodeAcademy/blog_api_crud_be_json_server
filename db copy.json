@@ -1,0 +1,118 @@
+{
+  "posts": [
+    {
+      "id": "9934410517756168",
+      "title": "Introduction to React Hooks",
+      "body": "React Hooks is a revolutionary feature in React that allows developers to use state and other React features without writing a class. It simplifies the code and makes it more readable.",
+      "author": "Jane Smith",
+      "tags": [
+        "React",
+        "Hooks"
+      ],
+      "date": "2022-03-27"
+    },
+    {
+      "id": "7643875069901725",
+      "title": "The Basics of Node.js",
+      "body": "Node.js is an open-source, cross-platform JavaScript runtime environment. It allows developers to run JavaScript on the server-side, which can be used to create scalable and efficient web applications.",
+      "author": "Michael Johnson",
+      "tags": [
+        "Node.js",
+        "JavaScript"
+      ],
+      "date": "2022-02-14"
+    },
+    {
+      "id": "9021793848917992",
+      "title": "Introduction to CSS Grid Layout",
+      "body": "CSS Grid Layout is a powerful tool for creating complex layouts in web design. It allows developers to easily define rows and columns, and to position elements within them.",
+      "author": "Sarah Lee",
+      "tags": [
+        "CSS",
+        "Grid Layout"
+      ],
+      "date": "2022-01-09"
+    },
+    {
+      "id": "7475752447669324",
+      "title": "The Impact of Artificial Intelligence on Society",
+      "body": "Artificial intelligence is changing the way we live and work. From voice assistants like Siri and Alexa to self-driving cars and drones, AI is becoming an increasingly important part of our daily lives. However, there are also concerns about the impact that AI could have on jobs, privacy, and even our basic rights as humans. As AI technology continues to advance, it will be important to carefully consider the implications of its use.",
+      "author": "Jane Smith",
+      "tags": [
+        "artificial intelligence",
+        "technology",
+        "society"
+      ],
+      "date": "2022-03-28"
+    },
+    {
+      "id": "4938017408499437",
+      "title": "The Rise of Virtual Reality",
+      "body": "Virtual reality is no longer just a novelty or a toy for gamers. It's quickly becoming a serious tool for education, healthcare, and even therapy. With VR headsets becoming more affordable and accessible, we can expect to see even more innovative applications of this technology in the coming years.",
+      "author": "James Johnson",
+      "tags": [
+        "virtual reality",
+        "technology"
+      ],
+      "date": "2022-03-31"
+    },
+    {
+      "id": "3904859038540385",
+      "title": "The Future of Blockchain Technology",
+      "body": "Blockchain technology has the potential to revolutionize many industries, from finance to healthcare. Its decentralized, secure nature makes it ideal for applications where trust is essential. As the technology continues to mature and become more widely adopted, we can expect to see many exciting new use cases emerge.",
+      "author": "Sarah Lee",
+      "tags": [
+        "blockchain",
+        "technology",
+        "finance"
+      ],
+      "date": "2022-03-29"
+    },
+    {
+      "id": "2018674309210958",
+      "title": "The Benefits of Cloud Computing",
+      "body": "Cloud computing has changed the way we do business. It allows us to access powerful computing resources from anywhere in the world, without having to invest in expensive hardware or infrastructure. This makes it easier for businesses of all sizes to compete in the global market.",
+      "author": "David Kim",
+      "tags": [
+        "cloud computing",
+        "technology",
+        "business"
+      ],
+      "date": "2022-03-27"
+    },
+    {
+      "id": "2985276291642853",
+      "title": "The Ethics of Autonomous Vehicles",
+      "body": "Self-driving cars are no longer just a futuristic dream - they're becoming a reality. However, as with any new technology, there are also ethical considerations to be made. For example, how should autonomous vehicles be programmed to handle ethical dilemmas on the road? Who is responsible in the event of an accident? These are just a few of the questions that need to be addressed as this technology continues to advance.",
+      "author": "Jessica Wong",
+      "tags": [
+        "autonomous vehicles",
+        "ethics",
+        "technology"
+      ],
+      "date": "2022-04-01"
+    },
+    {
+      "id": "6491558721935251",
+      "title": "80 days around world",
+      "body": "about 80 days around world",
+      "author": "James band",
+      "tags": [
+        "travel",
+        " books"
+      ],
+      "date": "2023-04-20"
+    },
+    {
+      "id": "05833371185177838",
+      "title": "80 days around world",
+      "body": "about 80 days around world",
+      "author": "James band",
+      "tags": [
+        "travel",
+        " books"
+      ],
+      "date": "2023-04-19"
+    }
+  ]
+}
