@@ -14,6 +14,12 @@ const postSchema = Joi.object({
   date: Joi.date().iso().required(),
 }).options({ abortEarly: false });
 
+// const commentSchema = Joi.object({
+//   text: Joi.string().required(),
+//   authorEmail: Joi.string().email().required(),
+//   author: Joi.string().required(),
+// }).options({ abortEarly: false });
+
 const validatePost = async (req, res, next) => {
   console.log('req.body ===', req.body);
   try {

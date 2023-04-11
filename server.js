@@ -58,3 +58,17 @@ app.delete('/posts/:id', (req, res) => {
   db.get('posts').remove({ id: req.params.id }).write();
   res.sendStatus(200);
 });
+
+// Get all comments
+app.get('/comments', (req, res) => {
+  const comments = db.get('comments').value();
+  res.json(comments);
+});
+
+// Create a new post
+app.post('/comments', validatePost, (req, res) => {
+  const id = Math.random().toString().slice(2);
+  const comment = { id, ...req.body };
+  db.get('posts').push(comment).write();
+  res.json(comment);
+});
