@@ -8,6 +8,17 @@ GET http://localhost:5000/posts
 
 ####
 
+POST http://localhost:5000/comments
+content-type: application/json
+
+{   
+  "authorEmail": "james@bond.com",
+  "text": "this is a test comment",
+  "postId": "3083126839342818"
+}
+
+####
+
 POST http://localhost:5000/posts
 content-type: application/json
 

@@ -73,10 +73,10 @@ app.get('/comments/:postId', (req, res) => {
 });
 
 // Create a new post
-app.post('/comments', validatePost, (req, res) => {
+app.post('/comments', (req, res) => {
   const id = Math.random().toString().slice(2);
   const comment = { id, ...req.body };
-  db.get('posts').push(comment).write();
+  db.get('comments').push(comment).write();
   res.json(comment);
 });
 
