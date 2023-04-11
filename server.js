@@ -82,6 +82,6 @@ app.post('/comments', (req, res) => {
 
 // Delete a comment
 app.delete('/comments/:id', (req, res) => {
-  db.get('comment').remove({ id: req.params.id }).write();
+  db.get('comments').remove({ id: req.params.id }).write();
   res.sendStatus(200);
 });
