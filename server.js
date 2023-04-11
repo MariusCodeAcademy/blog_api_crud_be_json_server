@@ -56,5 +56,5 @@ app.put('/posts/:id', (req, res) => {
 // Delete a post
 app.delete('/posts/:id', (req, res) => {
   db.get('posts').remove({ id: req.params.id }).write();
-  res.sendStatus(204);
+  res.sendStatus(200);
 });
