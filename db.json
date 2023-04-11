@@ -72,5 +72,13 @@
       "tags": ["CSS", "Grid Layout"],
       "date": "2022-09-10"
     }
+  ],
+  "comments": [
+    {
+      "id": "1546651",
+      "authorEmail": "james@bond.com",
+      "text": "this is a test comment",
+      "postId": "9021793848917992"
+    }
   ]
 }

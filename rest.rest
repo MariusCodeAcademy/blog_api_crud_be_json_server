@@ -1,3 +1,6 @@
+GET http://localhost:5000/comments
+
+####
 GET http://localhost:5000/posts
 
 ####
