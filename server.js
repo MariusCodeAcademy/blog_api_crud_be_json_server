@@ -65,10 +65,23 @@ app.get('/comments', (req, res) => {
   res.json(comments);
 });
 
+// Get all comments with id === postId
+app.get('/comments/:postId', (req, res) => {
+  const { postId } = req.params;
+  const comments = db.get('comments').filter({ postId }).value();
+  res.json(comments);
+});
+
 // Create a new post
 app.post('/comments', validatePost, (req, res) => {
   const id = Math.random().toString().slice(2);
   const comment = { id, ...req.body };
   db.get('posts').push(comment).write();
   res.json(comment);
+});
+
+// Delete a comment
+app.delete('/comments/:id', (req, res) => {
+  db.get('comment').remove({ id: req.params.id }).write();
+  res.sendStatus(200);
 });
