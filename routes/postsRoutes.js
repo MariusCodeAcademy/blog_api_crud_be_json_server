@@ -24,7 +24,11 @@ router.post('/posts', validatePost, (req, res) => {
 
 // Update an existing post
 router.put('/posts/:id', validatePost, (req, res) => {
-  const post = db.get('posts').find({ id: req.params.id }).assign(req.body).write();
+  const post = db
+    .get('posts')
+    .find({ id: req.params.id })
+    .assign(req.body)
+    .write();
   res.json(post);
 });
 

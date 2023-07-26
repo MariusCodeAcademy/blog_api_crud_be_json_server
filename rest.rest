@@ -1,10 +1,44 @@
+#### DELETE SINGLE POST
+DELETE http://localhost:5000/posts/13397852353265294
+
+#### GET SINGLE POST
+GET http://localhost:5000/posts/13397852353265294
+
+#### GET ALL POSTS
+GET http://localhost:5000/posts
+
+### CREATE POST
+POST http://localhost:5000/posts
+content-type: application/json
+
+{
+  "title": "Test Post",
+  "body": "This is a test post.",
+  "author": "John Doe",
+  "tags": ["test", "example"],
+  "date": "2022-04-03"
+}
+
+#### BAD CREATE POST
+
+POST http://localhost:5000/posts
+content-type: application/json
+
+{
+  
+  "body": "This is a test post.",
+  "author": "",
+  "tags": "test, tes1",
+  "date": "2022-04-03T12:00:00Z"
+}
+
+
+### 
 GET http://localhost:5000/comments/9021793848917992
 
 ####
-GET http://localhost:5000/posts/
+DELETE  http://localhost:5000/comments/845848428961611
 
-####
-GET http://localhost:5000/posts
 
 ####
 
@@ -17,7 +51,7 @@ content-type: application/json
   "postId": "3083126839342818"
 }
 
-####
+#### BAD CREATE POST
 
 POST http://localhost:5000/posts
 content-type: application/json
@@ -26,18 +60,7 @@ content-type: application/json
   
   "body": "This is a test post.",
   "author": "",
-  "tags": ["test", "example"],
+  "tags": "test, tes1",
   "date": "2022-04-03T12:00:00Z"
 }
 
-###
-POST http://localhost:5000/posts
-content-type: application/json
-
-{
-  "title": "Test Post",
-  "body": "This is a test post.",
-  "author": "John Doe",
-  "tags": ["test", "example"],
-  "date": "2022-04-03"
-}
