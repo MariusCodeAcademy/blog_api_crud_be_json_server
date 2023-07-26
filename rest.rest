@@ -1,8 +1,8 @@
 #### DELETE SINGLE POST
-DELETE http://localhost:5000/posts/13397852353265294
+DELETE http://localhost:5000/posts/15998523238920637
 
 #### GET SINGLE POST
-GET http://localhost:5000/posts/13397852353265294
+GET http://localhost:5000/posts/8374820193847912sasd
 
 #### GET ALL POSTS
 GET http://localhost:5000/posts
@@ -20,12 +20,10 @@ content-type: application/json
 }
 
 #### BAD CREATE POST
-
 POST http://localhost:5000/posts
 content-type: application/json
 
 {
-  
   "body": "This is a test post.",
   "author": "",
   "tags": "test, tes1",

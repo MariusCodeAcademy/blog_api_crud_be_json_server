@@ -36,6 +36,14 @@ app.get('/posts', (req, res) => {
 // Get a single post
 app.get('/posts/:id', (req, res) => {
   const post = db.get('posts').find({ id: req.params.id }).value();
+  console.log('post ===', post);
+  if (!post) {
+    res.status(404).json({
+      msg: 'bad data sent',
+      error: `posts with id ${req.params.id} was not found`,
+      type: 'file',
+    });
+  }
   res.json(post);
 });
 
@@ -59,6 +67,14 @@ app.put('/posts/:id', (req, res) => {
 
 // Delete a post
 app.delete('/posts/:id', (req, res) => {
+  const post = db.get('posts').find({ id: req.params.id }).value();
+  if (!post) {
+    res.status(404).json({
+      msg: 'bad data sent',
+      error: `posts with id ${req.params.id} was not found`,
+      type: 'file',
+    });
+  }
   db.get('posts').remove({ id: req.params.id }).write();
   res.sendStatus(200);
 });
