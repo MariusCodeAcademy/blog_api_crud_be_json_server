@@ -31,15 +31,17 @@ content-type: application/json
 }
 
 
-### 
+### GET ALL Comments
+GET http://localhost:5000/comments/
+
+### GET Comments for post with post id 9021793848917992
 GET http://localhost:5000/comments/9021793848917992
 
-####
+#### delete comment with comment id 845848428961611
 DELETE  http://localhost:5000/comments/845848428961611
 
 
-####
-
+#### Create a comment
 POST http://localhost:5000/comments
 content-type: application/json
 

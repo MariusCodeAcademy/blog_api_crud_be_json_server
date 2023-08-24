@@ -89,7 +89,7 @@ app.get('/comments', (req, res) => {
 app.get('/comments/:postId', (req, res) => {
   const { postId } = req.params;
   const comments = db.get('comments').filter({ postId }).value();
-  res.json(comments);
+  res.json(comments || []);
 });
 
 // Create a new post
