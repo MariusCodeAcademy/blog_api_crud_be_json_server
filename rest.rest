@@ -2,7 +2,7 @@
 DELETE http://localhost:5000/posts/15998523238920637
 
 #### GET SINGLE POST
-GET http://localhost:5000/posts/8374820193847912sasd
+GET http://localhost:5000/posts/8374820193847912qweq
 
 #### GET ALL POSTS
 GET http://localhost:5000/posts
@@ -13,6 +13,7 @@ content-type: application/json
 
 {
   "title": "Test Post",
+  "image": "https://picsum.photos/id/7/800/400",
   "body": "This is a test post.",
   "author": "John Doe",
   "tags": ["test", "example"],
