@@ -57,7 +57,7 @@ app.post('/posts', validatePost, (req, res) => {
 });
 
 // Update an existing post
-app.put('/posts/:id', (req, res) => {
+app.put('/posts/:id', validatePost, (req, res) => {
   const post = db
     .get('posts')
     .find({ id: req.params.id })
@@ -77,7 +77,9 @@ app.delete('/posts/:id', (req, res) => {
     });
   }
   db.get('posts').remove({ id: req.params.id }).write();
-  res.sendStatus(200);
+  res
+    .status(200)
+    .json({ msg: `post with id ${req.params.id} was deleted`, success: true });
 });
 
 // Get all comments
